@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-brand-cream text-brand-brown antialiased font-sans;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-extrabold tracking-tight text-brand-brown;
+  }
+
+  p {
+    @apply text-brand-brown/80 leading-relaxed;
+  }
+
+  a {
+    @apply text-brand-brown hover:text-brand-brownLight transition;
+  }
+
+  button {
+    @apply font-medium;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-brand-orange text-white rounded-soft shadow-soft 
+           hover:bg-brand-brownLight transition;
+  }
+
+  .btn-outline {
+    @apply px-6 py-3 border border-brand-brown text-brand-brown rounded-soft
+           hover:bg-brand-brown/10 transition;
+  }
+
+  .card {
+    @apply bg-white border border-brand-brown/10 rounded-soft shadow-soft p-8;
+  }
+
+  .section {
+    @apply py-28;
+  }
+
+  .section-title {
+    @apply text-center text-4xl md:text-5xl font-extrabold text-brand-brown;
+  }
+
+  .section-sub {
+    @apply text-center mt-4 text-lg text-brand-brown/80 max-w-2xl mx-auto;
+  }
+}
+
+.flash-orange {
+  animation: flashOrange 0.6s ease-in-out 3;
+}
+
+@keyframes flashOrange {
+  0% { background-color: transparent; }
+  50% { background-color: #E7A33A33; }  /* light transparent orange */
+  100% { background-color: transparent; }
+}
