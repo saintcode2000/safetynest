@@ -1,4 +1,4 @@
-import React from 'react';
+
 import housePic from '../images/housepic.jpg';
 
 export default function Hero() {
